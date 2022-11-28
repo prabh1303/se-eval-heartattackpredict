@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Heart Disease Predictor</title>
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="shortcut icon" href="{{ url_for('static', filename='diabetes-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Ultra&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+	</head>
+
+    <body>
+
+        <!-- Website Title -->
+		<div class="container">
+
+			<!-- <div class="icon1">
+				<h2 class="logo1">HDP</h2>
+			</div> -->
+
+            <h2 class='container-heading'>
+			<a href="main.html" target="_blank"><span class="heading_font">Heart Disease Predictor</span></a>
+		    </h2>
+
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask.</p>
+    		</div>
+    	</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h2>Prediction: <span class='danger'>Oops! You have Chances of Heart Disease.</span></h2>
+				
+			{% elif prediction==0 %}
+				<h2>Prediction: <span class='safe'>Great! Looks like You DON'T have chances of Heart Disease.</span></h2>
+				
+			{% endif %}
+		</div>
+
+		<!-- Footer -->
+		<div class='footer'>
+			<div class="contact">
+			  <a target="_blank" href="https://github.com/prabh1303/se-eval-heartattackpredict"><i
+				  class="fab fa-github fa-lg contact-icon"></i></a>
+			</div>
+			<p class='footer-description'>Made by Prabhjot, Shreya, Sukhnoor & Soumil</p>
+		  </div>
+
+	</body>
+</html>
